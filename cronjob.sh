@@ -28,7 +28,7 @@ if [[ -x $script ]]
       chmod +x $script 
    elif [[ -f $script ]]
    then  
-      "*/5 * * * * $script"
+      "*/15 * * * * $script"
   else
     echo "Problem in creating file: \"$script\""
 fi
