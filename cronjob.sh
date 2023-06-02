@@ -1,6 +1,5 @@
 #! /bin/bash
 # generate URL.sh script
-#touch /home/aqsa286/Desktop/URL.sh
 
 script=/home/aqsa286/Desktop/URL.sh         #name of the script
 
@@ -8,7 +7,7 @@ script=/home/aqsa286/Desktop/URL.sh         #name of the script
 cat << 'EOF'
 #! /bin/bash
 
-URL=$1
+URL=https://www.google.com
 echo "URL=" $URL
 
 Status_Code=$(curl --write-out "%{http_code}" $URL --output output.txt --silent )
@@ -21,11 +20,12 @@ else
 fi     
 
 EOF
-) > $script
+) >  $script  
 
-if [ -f $script ]
-  then
-      chmod +x $script 
-  else
-    echo "Problem in creating file: \"$script\""
-fi
+chmod +x $script
+sh $script 
+
+crontab <<EOF
+*/5 * * * * $script
+EOF
+
