@@ -23,12 +23,9 @@ fi
 EOF
 ) > $script
 
-if [[ -x $script ]]
+if [ -f $script ]
   then
       chmod +x $script 
-   elif [[ -f $script ]]
-   then  
-      "*/15 * * * * $script"
   else
     echo "Problem in creating file: \"$script\""
 fi
