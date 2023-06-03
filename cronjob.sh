@@ -4,7 +4,7 @@
 script=/home/aqsa286/Desktop/URL.sh         #name of the script
 
 (
-cat << \'EOF\'
+cat << 'EOF'
 #! /bin/bash
 
 URL=https://www.google.com
