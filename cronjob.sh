@@ -7,7 +7,7 @@ script=/home/aqsa286/Desktop/URL.sh         #name of the script
 cat << 'EOF'
 #! /bin/bash
 
-URL=https://www.google.com
+URL=https://www.google.com.pk
 echo "URL=" $URL
 
 Status_Code=$(curl --write-out "%{http_code}" $URL --output output.txt --silent )
