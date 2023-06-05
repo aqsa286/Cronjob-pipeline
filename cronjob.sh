@@ -2,7 +2,7 @@
 # generate URL.sh script
 
 script=/home/aqsa286/Desktop/URL.sh         #name of the script
-
+sudo su
 (
 cat << 'EOF'
 #! /bin/bash
